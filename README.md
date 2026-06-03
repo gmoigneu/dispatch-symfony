@@ -12,6 +12,7 @@ or bump dependencies.
 | Method | Path             | Returns                               |
 |--------|------------------|---------------------------------------|
 | GET    | `/`              | `{ app, message }`                    |
+| GET    | `/status`        | `{ status: "ok" }`                    |
 | GET    | `/hello/{name}`  | `{ message: "Hello, <name>!" }`       |
 
 ## Run locally
