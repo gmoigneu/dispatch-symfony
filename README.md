@@ -13,6 +13,7 @@ or bump dependencies.
 |--------|------------------|---------------------------------------|
 | GET    | `/`              | `{ app, message }`                    |
 | GET    | `/hello/{name}`  | `{ message: "Hello, <name>!" }`       |
+| GET    | `/status`        | `{ status: "ok" }`                    |
 
 ## Run locally
 
