@@ -1,4 +1,4 @@
-# obvious-symfony
+# dispatch-symfony
 
 A small Symfony 7.0 application used as the target for the Obvious agent demo.
 
