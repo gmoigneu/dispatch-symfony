@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Controller;
+
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Routing\Attribute\Route;
+
+class StatusController
+{
+    #[Route('/status', name: 'status', methods: ['GET'])]
+    public function status(): JsonResponse
+    {
+        return new JsonResponse(['status' => 'ok']);
+    }
+}
