@@ -29,4 +29,12 @@ class HelloController extends AbstractController
             'message' => $this->greeter->greet($name),
         ]);
     }
+
+    #[Route('/greeting/{name}', name: 'greeting', methods: ['GET'], requirements: ['name' => '[a-zA-Z0-9_-]+'])]
+    public function greeting(string $name): JsonResponse
+    {
+        return $this->json([
+            'greeting' => $this->greeter->greetInFrench($name),
+        ]);
+    }
 }
