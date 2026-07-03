@@ -15,12 +15,4 @@ class StatusController extends AbstractController
             'status' => 'ok',
         ]);
     }
-
-    #[Route('/healthz', name: 'healthz', methods: ['GET'])]
-    public function healthz(): JsonResponse
-    {
-        return $this->json([
-            'status' => 'ok',
-        ]);
-    }
 }
