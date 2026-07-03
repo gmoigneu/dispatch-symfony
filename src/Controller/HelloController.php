@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Service\Greeter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
 class HelloController extends AbstractController
@@ -28,5 +29,15 @@ class HelloController extends AbstractController
         return $this->json([
             'message' => $this->greeter->greet($name),
         ]);
+    }
+
+    #[Route('/background', name: 'background', methods: ['GET'])]
+    public function background(): Response
+    {
+        $html = '<!DOCTYPE html>'
+            . '<html><head><style>body { background-color: #000000; color: #ffffff; }</style></head>'
+            . '<body></body></html>';
+
+        return new Response($html, 200, ['Content-Type' => 'text/html']);
     }
 }
