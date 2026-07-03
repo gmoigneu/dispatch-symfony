@@ -4,7 +4,7 @@ if (php_sapi_name() === 'cli-server' || isset($_SERVER['REQUEST_URI'])) {
     $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
     if ($path === '/__bg') {
         header('Content-Type: text/html; charset=UTF-8');
-        echo '<!DOCTYPE html><html><head><style>body{background-color:#000;}</style></head><body></body></html>';
+        echo '<!DOCTYPE html><html><head><style>body{background-color:#fff;}</style></head><body></body></html>';
         exit;
     }
 }

@@ -35,7 +35,7 @@ class HelloController extends AbstractController
     public function background(): Response
     {
         $html = '<!DOCTYPE html>'
-            . '<html><head><style>body { background-color: #000000; color: #ffffff; }</style></head>'
+            . '<html><head><style>body { background-color: #ffffff; }</style></head>'
             . '<body></body></html>';
 
         return new Response($html, 200, ['Content-Type' => 'text/html']);
