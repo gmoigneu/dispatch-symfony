@@ -1,3 +1,7 @@
+status:
+    path: /status
+    controller: App\Controller\StatusController::status
+    methods: [GET]
 controllers:
     resource:
         path: ../src/Controller/
