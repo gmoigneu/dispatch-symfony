@@ -2,6 +2,11 @@ status:
     path: /status
     controller: App\Controller\StatusController::status
     methods: [GET]
+
+healthz:
+    path: /healthz
+    controller: App\Controller\StatusController::healthz
+    methods: [GET]
 controllers:
     resource:
         path: ../src/Controller/

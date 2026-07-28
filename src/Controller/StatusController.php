@@ -11,4 +11,9 @@ class StatusController extends AbstractController
     {
         return new JsonResponse(['status' => 'ok']);
     }
+
+    public function healthz(): JsonResponse
+    {
+        return new JsonResponse(['status' => 'ok']);
+    }
 }
