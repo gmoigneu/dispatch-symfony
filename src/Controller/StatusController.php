@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Routing\Attribute\Route;
 
 class StatusController extends AbstractController
 {
@@ -12,6 +13,7 @@ class StatusController extends AbstractController
         return new JsonResponse(['status' => 'ok']);
     }
 
+    #[Route('/healthz', name: 'healthz', methods: ['GET'])]
     public function healthz(): JsonResponse
     {
         return new JsonResponse(['status' => 'ok']);
