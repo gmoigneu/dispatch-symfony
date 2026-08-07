@@ -8,8 +8,8 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class StatusController extends AbstractController
 {
-    #[Route('/status', name: 'app_status', methods: ['GET'])]
-    public function __invoke(): JsonResponse
+    #[Route('/status', name: 'app_status', methods: ['GET', 'HEAD'])]
+    public function index(): JsonResponse
     {
         return $this->json([
             'status' => 'ok',
