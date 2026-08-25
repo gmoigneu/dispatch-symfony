@@ -16,7 +16,7 @@ class StatusController extends AbstractController
         ]);
     }
 
-    #[Route('/healthz', name: 'healthz', methods: ['GET', 'HEAD'])]
+    #[Route('/healthz', name: 'healthz', methods: ['GET'])]
     public function healthz(): JsonResponse
     {
         return new JsonResponse(['status' => 'ok']);
